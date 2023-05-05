@@ -29,7 +29,7 @@ body{
 }
 header .logo{
     float: left;
-    width: 17%;
+    width: 250px;
     height: 100%;
     /* background-color: midnightblue; */
 }
@@ -41,13 +41,13 @@ header .logo{
 }
 header .menu{
     float: right;
-    width: 13%;
+    width: 200px;
     height: 100%;
     /* background-color: cadetblue; */
 }
 .menu > ul{
     float: right;
-    width: 45%;
+    width: 90px;
     height: 100%;
 }
 .menu > ul > li{
@@ -55,6 +55,7 @@ header .menu{
     height: 50%;
     /* background-color: azure; */
     padding-right: 5%;
+    font-size: 16px;
     text-align: right;
     line-height: 150%;
     cursor: pointer;
@@ -66,8 +67,8 @@ header .menu{
 .submenu{
     position: absolute;
     top: 0%;
-    left: -122%;
-    width: 122%;
+    left: -100px;
+    width: 100px;
     height: auto;
     display: none;
     background-color: rgba(250, 250, 250, 0.4);
@@ -84,31 +85,57 @@ main{
     height: 93%;
 }
 .banner{
-    position: relative;
+    position: absolute;
     top: 8%;
-    width: 90%;
+    width: 100%;
     height: 80%;
     /* background-color: aliceblue; */
 }
-.banner .mainText{
+.mainText{
     position: absolute;
     font-family: 'Anton', sans-serif;
     font-size: 130px;
     opacity: 0;
     transition: 3s;
 }
-.banner .fir{
-    left: -5%;
+.fir{
+    left: 0%;
     top: 0%;
 }
-.banner .sec{
-    right: -5%;
+.sec{
+    right: 0%;
     bottom: 0%;
 }
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 .banner img{
-    position: absolute;
-    top: 15%;
-    left: 10%;
+    width: 75%;
 }
 
-/*min-width 값 주기*/
+@media screen and (max-width : 980px) and (min-width : 701px) {
+    .banner img{
+        width: 90%;
+    }
+}
+@media screen and (max-width : 700px) {
+    #wrap > header{
+        width: 700px;
+    }
+    header .logo{
+        width: 200px;
+    }
+    .logo a{
+        font-size: 38px;
+        line-height: 140%;
+    }
+    .banner{
+        width: 700px;
+    }
+    .banner img{
+        width: 630px;
+    }
+    
+}
